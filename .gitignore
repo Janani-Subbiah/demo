@@ -11,6 +11,7 @@
 .classpath
 .factorypath
 .gradle
+!gradle-wrapper.jar
 .idea
 .metadata
 .project
