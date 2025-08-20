@@ -1,8 +1,6 @@
 # Demo Repository
 
-⚠️ **This repository is not under active development** ⚠️
-
-This is a demo Kotlin Spring Boot application for testing and learning purposes only.
+⚠️ **This project is not under active development** ⚠️
 
 ## Running the app
 
