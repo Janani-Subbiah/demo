@@ -1,0 +1,52 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-token"
+      }
+    },
+    "mcp-atlassian": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "CONFLUENCE_URL",
+        "-e", "CONFLUENCE_PERSONAL_TOKEN",
+        "-e", "CONFLUENCE_SSL_VERIFY",
+        "-e", "JIRA_URL",
+        "-e", "JIRA_PERSONAL_TOKEN",
+        "-e", "JIRA_SSL_VERIFY",
+        "ghcr.io/sooperset/mcp-atlassian:latest"
+      ],
+      "env": {
+        "CONFLUENCE_URL": "https://detroitlabs.jira.com",
+        "CONFLUENCE_PERSONAL_TOKEN": "your-confluence-token",
+        "CONFLUENCE_SSL_VERIFY": "true",
+        "JIRA_URL": "https://detroitlabs.jira.com",
+        "JIRA_PERSONAL_TOKEN": "your-jira-token",
+        "JIRA_SSL_VERIFY": "true"
+      }
+    },
+    "jira-user-stories": {
+      "command": "python",
+      "args": ["/Users/jananis/Desktop/demo/jira-mcp-server/server.py"],
+      "env": {
+        "JIRA_URL": "https://detroitlabs.jira.com",
+        "JIRA_EMAIL": "your-email@detroitlabs.com",
+        "JIRA_API_TOKEN": "your-api-token-here",
+        "JIRA_SSL_VERIFY": "true"
+      }
+    }
+  }
+}
+
